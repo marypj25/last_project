@@ -1,0 +1,43 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h5>Просмотр полученных данных</h5>
+    <h6>{{ task_formulation }}</h6>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th scope="col">Образовательная программа</th>
+            <th scope="col">Имя</th>
+            <th scope="col">Язык</th>
+            <th scope="col">Год</th>
+            <th scope="col">Выпускной курс?</th>
+        </tr>
+        </thead>
+        <tbody style="border-top: 6px;">
+
+        <tr>
+           <!-- {% for key, value in last_object.items %}
+                <td>{{ key }}:{{ value }}</td>
+            {% endfor %}
+            <td>{{ result }}</td>
+        </tr>-->
+
+        <tr>
+            {% for item in last_values %}
+                <td>{{ item }}</td>
+            {% endfor %}
+            <td>{{ result }}</td>
+        </tr>
+
+        </tbody>
+    </table>
+{% endblock %}
+
+
+
+
+
+
+
+
+

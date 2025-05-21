@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    {% load static %}
+    <link href="{% static 'css/mycss.css' %}" rel="stylesheet">
+    <title>{% block title %}{% endblock %}</title>
+
+    <style>
+.header {
+         padding: 50px;
+         text-align: center;
+         background: #EF8CE8;
+         color: white;
+         }
+.photo1 {
+margin-top: 60px;
+margin-left: 40px;
+margin-right: 40px;
+width: 400px;
+  }
+    .photo2 {
+margin-top: 300px;
+margin-left: 1000px;
+margin-right: 100px;
+width: 400px;
+  }
+.photo3 {
+margin-top: 180px;
+margin-left: 60px;
+margin-right: 100px;
+width: 400px;
+  }
+figure {
+  border: 10px #F2D7D5 solid;
+  padding: 4px;
+  margin: auto;
+}
+figcaption {
+  background-color: #7A0B72;
+  color: white;
+  font-style: italic;
+  padding: 2px;
+  text-align: center;
+}
+
+.block1{
+    margin-top: -300px;
+margin-left: 500px;
+margin-right: 0px;
+width: 800px;
+         }
+.block2{
+ margin-top: -300px;
+margin-left: 50px;
+margin-right: 0px;
+width: 800px;
+         }
+.block3{
+ margin-top: -200px;
+margin-left: 600px;
+margin-right: 0px;
+width: 800px;
+         }
+
+</head>
+</style>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+        <div class="card-body bgc">
+            {% load static %}
+            <h2>Я и мое обучение в Вышке <img src="{% static 'images/crow.webp' %}"  alt="settings_django" height="50px"></h2>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-body">
+            {% block content %}{% endblock %}
+        </div>
+    </div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+
+
+{% block content %}
+    <h2>Сводная таблица</h2>
+    <table class="table table-bordered">
+
+        <thead>
+        <tr>
+            <th>Имя студента</th>
+            <th>Образовательная программа</th>
+            <th>Год поступления</th>
+            <th>Выпускается ли стедент в этом году</th>
+            <th>Время обращения</th>
+        </tr>
+        </thead>
+        <tbody style="border-top: 3.0px;">
+
+        {% for object in objects %}
+            <tr>
+                <td>{{object.a}}</td>
+                <td>{{object.b}}</td>
+                <td>{{object.c}}</td>
+                <td>{{object.result}}</td>
+                <td>{{object.current_date}}</td>
+            </tr>
+        {% endfor %}
+
+        <tbody>
+    </table>
+
+{% endblock %}
+
+
+
+
